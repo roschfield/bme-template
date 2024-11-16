@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Manpower website</title>
+  </head>
+  <body>
+    <!-- Navbar-->
+    <nav class="bg-white border-b border-gray-200 px-4 py-4">
+      <div
+        class="container mx-auto flex flex-wrap items-center justify-between"
+      >
+        <div class="flex items-center">
+          <span class="text-xl font-bold text-gray-800">Brand</span>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="block lg:hidden">
+          <button id="navbar-toggle" class="text-gray-800 focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+        <!-- Navbar links with transition properties -->
+        <div
+          id="navbar-menu"
+          class="w-full lg:flex lg:items-center lg:w-auto max-h-0 overflow-hidden opacity-0 lg:opacity-100 lg:max-h-full transition-all duration-500 ease-in-out transform lg:transform-none origin-top"
+        >
+          <ul class="lg:flex lg:space-x-12">
+            <li>
+              <a
+                href="#"
+                class="text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero section-->
+    <section
+      class="relative w-full h-screen bg-cover bg-center"
+      style="
+        background-image: url('https://via.placeholder.com/1920x1080?text=Background+Image');
+      "
+    >
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+
+      <!-- Content -->
+      <div
+        class="relative flex items-center justify-start h-full px-6 md:px-12 text-white"
+      >
+        <div class="max-w-xl">
+          <!-- Subtitle -->
+          <h3 class="text-lg font-semibold mb-4">Subtitle</h3>
+
+          <!-- Big Title -->
+          <h1 class="text-4xl font-bold mb-6">Big Title</h1>
+
+          <!-- Paragraph -->
+          <p class="text-lg mb-8">
+            This is a paragraph that provides more information about the
+            services or offerings. It introduces the user to what they can
+            expect, whether it's finding work or booking staff, all available
+            right here.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="px-8 py-3 border-2 border-white text-white font-semibold text-lg rounded-md hover:bg-white hover:text-black transition duration-300"
+              >Find Work</a
+            >
+            <a
+              href="#"
+              class="px-8 py-3 border-2 border-white text-white font-semibold text-lg rounded-md hover:bg-white hover:text-black transition duration-300"
+              >Book Your Staff</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- image carousel-->
+    <div class="relative w-full max-w-4xl mx-auto">
+      <!-- Carousel Container -->
+      <div class="relative overflow-hidden rounded-lg">
+        <!-- Images Wrapper -->
+        <div
+          class="carousel-images flex transition-transform duration-1000"
+          style="width: 100%; animation: slide 18s infinite ease-in-out"
+        >
+          <!-- Image 1 -->
+          <div class="w-full flex-shrink-0 relative">
+            <img
+              src="https://via.placeholder.com/800x400?text=Image+1"
+              alt="Image 1"
+              class="w-full h-auto object-cover"
+            />
+            <!-- Title -->
+            <div
+              class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-4 z-10"
+            >
+              <h2 class="text-2xl font-bold">Title for Image 1</h2>
+            </div>
+          </div>
+          <!-- Image 2 -->
+          <div class="w-full flex-shrink-0 relative">
+            <img
+              src="https://via.placeholder.com/800x400?text=Image+2"
+              alt="Image 2"
+              class="w-full h-auto object-cover"
+            />
+            <!-- Title -->
+            <div
+              class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-4 z-10"
+            >
+              <h2 class="text-2xl font-bold">Title for Image 2</h2>
+            </div>
+          </div>
+          <!-- Image 3 -->
+          <div class="w-full flex-shrink-0 relative">
+            <img
+              src="https://via.placeholder.com/800x400?text=Image+3"
+              alt="Image 3"
+              class="w-full h-auto object-cover"
+            />
+            <!-- Title -->
+            <div
+              class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-4 z-10"
+            >
+              <h2 class="text-2xl font-bold">Title for Image 3</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Services-->
+    <div class="container mx-auto px-4 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Column 1 -->
+        <div
+          class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg"
+        >
+          <img
+            src="https://via.placeholder.com/600x400"
+            alt="Image 1"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6 text-center">
+            <h2 class="text-2xl font-bold text-gray-800">Title 1</h2>
+            <p class="text-gray-600 mt-2">
+              This is a sample paragraph describing the first column. It
+              provides brief and useful information.
+            </p>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div
+          class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg"
+        >
+          <img
+            src="https://via.placeholder.com/600x400"
+            alt="Image 2"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6 text-center">
+            <h2 class="text-2xl font-bold text-gray-800">Title 2</h2>
+            <p class="text-gray-600 mt-2">
+              This is a sample paragraph describing the second column. It's
+              concise and engaging.
+            </p>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div
+          class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg"
+        >
+          <img
+            src="https://via.placeholder.com/600x400"
+            alt="Image 3"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6 text-center">
+            <h2 class="text-2xl font-bold text-gray-800">Title 3</h2>
+            <p class="text-gray-600 mt-2">
+              This is a sample paragraph for the third column. It offers a short
+              description for users.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Looking for job-->
+    <div class="container mx-auto px-4 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white">
+        <!-- Column 1 -->
+        <div class="flex flex-col items-center justify-center p-8">
+          <h1 class="text-4xl font-bold text-gray-800 text-center">
+            Big Title 1
+          </h1>
+          <button
+            class="bg-blue-500 text-white px-6 py-3 mt-6 rounded-md text-lg font-semibold hover:bg-blue-600 transition duration-300"
+          >
+            Call to Action
+          </button>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="flex flex-col items-center justify-center p-8">
+          <h1 class="text-4xl font-bold text-gray-800 text-center">
+            Big Title 2
+          </h1>
+          <button
+            class="bg-blue-500 text-white px-6 py-3 mt-6 rounded-md text-lg font-semibold hover:bg-blue-600 transition duration-300"
+          >
+            Call to Action
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--about section-->
+
+    <div class="bg-yellow-100 py-12">
+      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- About Info -->
+        <div class="flex flex-col justify-center p-6">
+          <p class="text-lg text-gray-600 mb-2">About Us</p>
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">
+            We Are Passionate About What We Do
+          </h1>
+          <p class="text-gray-700 text-lg leading-relaxed mb-6">
+            Our mission is to create meaningful and impactful solutions for our
+            clients. We bring innovation, creativity, and dedication to every
+            project we work on.
+          </p>
+          <button
+            class="bg-blue-500 text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-blue-600 transition duration-300 w-40"
+          >
+            Learn More
+          </button>
+        </div>
+
+        <!-- About Image -->
+        <div>
+          <img
+            src="https://via.placeholder.com/600x400"
+            alt="About Image"
+            class="w-full h-full object-cover rounded-lg shadow-md"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- contact us-->
+    <div class="flex flex-col items-center justify-center p-6 bg-gray-100">
+      <!-- Title -->
+      <h1 class="text-3xl md:text-5xl font-bold text-gray-800 text-center mb-4">
+        Contact Us Today
+      </h1>
+
+      <!-- Phone Icon -->
+      <div class="mb-6 text-gray-700">
+        <i class="fas fa-phone-alt text-5xl"></i>
+        <!-- Using Font Awesome Icon -->
+      </div>
+
+      <!-- Button -->
+      <button
+        class="px-6 py-3 border-2 border-gray-800 text-gray-800 rounded-md font-semibold hover:bg-yellow-100 hover:border-yellow-400 hover:text-yellow-600 transition duration-300"
+      >
+        Contact Us Today
+      </button>
+    </div>
+
+    <!-- offers-->
+    <div class="bg-gray-100 py-16">
+      <!-- Title Section -->
+      <div class="text-center mb-8">
+        <h3 class="text-lg font-semibold text-gray-600">Subtitle</h3>
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Big Title</h1>
+        <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+          This is a big paragraph that explains more about the topic. It gives
+          additional information and context for the section above. The content
+          is flexible to accommodate different lengths of text.
+        </p>
+        <hr class="border-t-2 border-gray-300 mb-8" />
+      </div>
+
+      <!-- 3 Columns with Icons, Titles, and Paragraphs -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-8">
+        <!-- Column 1 -->
+        <div class="text-center">
+          <div class="w-24 h-24 mx-auto mb-4">
+            <img
+              src="https://via.placeholder.com/100"
+              alt="Icon 1"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Title 1</h4>
+          <p class="text-gray-600">
+            This is a short paragraph about the first item. It can explain the
+            purpose or the details of the icon above.
+          </p>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="text-center">
+          <div class="w-24 h-24 mx-auto mb-4">
+            <img
+              src="https://via.placeholder.com/100"
+              alt="Icon 2"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Title 2</h4>
+          <p class="text-gray-600">
+            This is a short paragraph about the second item. It highlights the
+            significance or features related to the icon above.
+          </p>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="text-center">
+          <div class="w-24 h-24 mx-auto mb-4">
+            <img
+              src="https://via.placeholder.com/100"
+              alt="Icon 3"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Title 3</h4>
+          <p class="text-gray-600">
+            This is a short paragraph about the third item. It provides more
+            context or explanation for the icon shown above.
+          </p>
+        </div>
+      </div>
+      <!-- 3 Columns with Icons, Titles, and Paragraphs -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Column 1 -->
+        <div class="text-center">
+          <div class="w-24 h-24 mx-auto mb-4">
+            <img
+              src="https://via.placeholder.com/100"
+              alt="Icon 1"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Title 1</h4>
+          <p class="text-gray-600">
+            This is a short paragraph about the first item. It can explain the
+            purpose or the details of the icon above.
+          </p>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="text-center">
+          <div class="w-24 h-24 mx-auto mb-4">
+            <img
+              src="https://via.placeholder.com/100"
+              alt="Icon 2"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Title 2</h4>
+          <p class="text-gray-600">
+            This is a short paragraph about the second item. It highlights the
+            significance or features related to the icon above.
+          </p>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="text-center">
+          <div class="w-24 h-24 mx-auto mb-4">
+            <img
+              src="https://via.placeholder.com/100"
+              alt="Icon 3"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h4 class="text-xl font-semibold text-gray-800 mb-2">Title 3</h4>
+          <p class="text-gray-600">
+            This is a short paragraph about the third item. It provides more
+            context or explanation for the icon shown above.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- customer reviews-->
+    <div class="p-8 bg-gray-100">
+      <!-- Subtitle -->
+      <p class="text-lg text-gray-600 text-center mb-2">
+        What Our Customers Say
+      </p>
+
+      <!-- Big Title -->
+      <h2 class="text-3xl md:text-5xl font-bold text-gray-800 text-center mb-6">
+        Testimonials
+      </h2>
+
+      <!-- Tab Section -->
+      <div x-data="{ activeTab: 1 }" class="space-y-6">
+        <!-- Tabs -->
+        <div
+          class="flex justify-center space-x-8 border-b border-gray-300 pb-4"
+        >
+          <button
+            @click="activeTab = 1"
+            class="text-lg font-medium text-gray-700 pb-2 transition-all duration-300 border-b-2"
+            :class="activeTab === 1 ? 'border-gray-800 text-gray-800' : 'border-transparent'"
+          >
+            Review 1
+          </button>
+          <button
+            @click="activeTab = 2"
+            class="text-lg font-medium text-gray-700 pb-2 transition-all duration-300 border-b-2"
+            :class="activeTab === 2 ? 'border-gray-800 text-gray-800' : 'border-transparent'"
+          >
+            Review 2
+          </button>
+        </div>
+
+        <!-- Customer Reviews -->
+        <div class="relative">
+          <!-- Transition Wrapper -->
+          <div
+            class="relative overflow-hidden transition-all duration-500"
+            style="min-height: 300px"
+          >
+            <!-- Review 1 -->
+            <div
+              x-show="activeTab === 1"
+              x-transition:enter="transition-opacity duration-500"
+              x-transition:enter-start="opacity-0"
+              x-transition:enter-end="opacity-100"
+              x-transition:leave="transition-opacity duration-500"
+              x-transition:leave-start="opacity-100"
+              x-transition:leave-end="opacity-0"
+              class="absolute inset-0 flex flex-col items-center text-center space-y-4"
+            >
+              <!-- Rounded Image -->
+              <img
+                src="https://via.placeholder.com/100"
+                alt="John Doe"
+                class="w-24 h-24 rounded-full object-cover border-2 border-gray-300"
+              />
+
+              <!-- Review Text -->
+              <p class="text-lg text-gray-600 max-w-2xl">
+                "The services are outstanding! The attention to detail and
+                quality exceeded my expectations. I would recommend this company
+                to anyone."
+              </p>
+
+              <!-- Name and Post -->
+              <div>
+                <p class="text-xl font-semibold text-gray-800">John Doe</p>
+                <p class="text-gray-500">CEO, Company A</p>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div
+              x-show="activeTab === 2"
+              x-transition:enter="transition-opacity duration-500"
+              x-transition:enter-start="opacity-0"
+              x-transition:enter-end="opacity-100"
+              x-transition:leave="transition-opacity duration-500"
+              x-transition:leave-start="opacity-100"
+              x-transition:leave-end="opacity-0"
+              class="absolute inset-0 flex flex-col items-center text-center space-y-4"
+            >
+              <!-- Rounded Image -->
+              <img
+                src="https://via.placeholder.com/100"
+                alt="Jane Smith"
+                class="w-24 h-24 rounded-full object-cover border-2 border-gray-300"
+              />
+
+              <!-- Review Text -->
+              <p class="text-lg text-gray-600 max-w-2xl">
+                "Amazing experience! The team was professional, and the end
+                product was exactly what I needed. Can't thank them enough!"
+              </p>
+
+              <!-- Name and Post -->
+              <div>
+                <p class="text-xl font-semibold text-gray-800">Jane Smith</p>
+                <p class="text-gray-500">Marketing Director, Company B</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Company logos-->
+
+    <div class="container mx-auto px-4 py-12">
+      <h1 class="text-3xl font-bold text-gray-800 text-center mb-8">
+        Our Partners
+      </h1>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <!-- Logo 1 -->
+        <div class="flex justify-center items-center">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Company 1 Logo"
+            class="w-full h-32"
+          />
+        </div>
+        <!-- Logo 2 -->
+        <div class="flex justify-center items-center">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Company 2 Logo"
+            class="w-full h-32"
+          />
+        </div>
+        <!-- Logo 3 -->
+        <div class="flex justify-center items-center">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Company 3 Logo"
+            class="w-full h-32"
+          />
+        </div>
+        <!-- Logo 4 -->
+        <div class="flex justify-center items-center">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Company 4 Logo"
+            class="w-full h-32"
+          />
+        </div>
+        <!-- Logo 5 -->
+        <div class="flex justify-center items-center">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Company 5 Logo"
+            class="w-full h-32"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!--footer-->
+    <footer class="bg-gray-900 text-white py-8">
+      <div class="container mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Company Info: Logo, Address, Contact -->
+          <div class="space-y-4">
+            <!-- Logo (replace src with your logo's path) -->
+            <img
+              src="https://via.placeholder.com/150x50"
+              alt="Company Logo"
+              class="mb-4"
+            />
+
+            <!-- Company Address -->
+            <p class="text-gray-400">
+              1234 Business Rd,<br />
+              Suite 5678,<br />
+              New York, NY 10001
+            </p>
+
+            <!-- Company Contact -->
+            <p class="text-gray-400">
+              Phone:
+              <a href="tel:+1234567890" class="hover:text-white"
+                >+1 (234) 567-890</a
+              ><br />
+              Email:
+              <a href="mailto:info@company.com" class="hover:text-white"
+                >info@company.com</a
+              >
+            </p>
+          </div>
+
+          <!-- Links: Company, Support, Social -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            <div>
+              <h3 class="font-bold text-xl mb-4">Company</h3>
+              <ul>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition duration-300 ease-in-out"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition duration-300 ease-in-out"
+                    >Careers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition duration-300 ease-in-out"
+                    >Press</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-xl mb-4">Support</h3>
+              <ul>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition duration-300 ease-in-out"
+                    >Help Center</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition duration-300 ease-in-out"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-xl mb-4">Follow Us</h3>
+              <ul>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition duration-300 ease-in-out"
+                    >Twitter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition duration-300 ease-in-out"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-white transition duration-300 ease-in-out"
+                    >Facebook</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
